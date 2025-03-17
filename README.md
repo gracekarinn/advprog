@@ -18,3 +18,8 @@ Saya telah mengikuti panduan tentang routing untuk halaman yang tidak dikenali, 
 **Refleksi commit 4:**
 
 Code ini adalah web server single-threaded yang memproses request secara berurutan sehingga jika ada request lambat seperti `/sleep` seluruh server akan terblokir. Kekurangan utamanya adalah blocking execution, minimnya error handling, dan parsing HTTP yang terbatas. 
+
+
+**Refleksi commit 5:**
+
+Saya telah mengimplementasikan ThreadPool untuk menangani koneksi secara konkuren. Sekarang server dapat menangani beberapa request secara bersamaan tanpa terblokir oleh request yang membutuhkan waktu lama (seperti endpoint `/sleep`). Implementasi menggunakan konsep Rust seperti channels, mutex, dan Arc untuk berbagi data antar thread dengan aman. Pola "worker" yang digunakan memungkinkan server untuk mendistribusikan beban kerja secara efisien ke sejumlah thread yang telah ditentukan. Saya juga menambahkan implementasi trait Drop untuk memastikan shutdown yang bersih ketika server dihentikan. Dengan perubahan ini, performa server meningkat signifikan untuk menangani traffic yang lebih besar.
