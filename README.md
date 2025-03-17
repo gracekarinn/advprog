@@ -8,3 +8,8 @@ Code ini membangun web server sederhana yang menerima request HTTP, membacanya m
 
 Kode ini adalah HTTP server sederhana di Rust yang menangani request pada port `7878`, membaca request dengan `BufReader`, dan mengembalikan file `hello.html` sebagai respons dengan status `200 OK`.  
 
+**Refleksi commit 3:**
+
+![Commit 3 screen capture](/assets/images/commit3.png)
+
+Saya telah mengikuti panduan tentang routing untuk halaman yang tidak dikenali, termasuk pembuatan halaman 404. Buku yang digunakan sangat jelas dan membantu sehingga saya semakin memahami sintaks serta gaya pemrograman Rust. Alur kode terasa jelas dan memudahkan saya dalam memahami cara kerjanya. 
