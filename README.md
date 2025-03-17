@@ -13,3 +13,8 @@ Kode ini adalah HTTP server sederhana di Rust yang menangani request pada port `
 ![Commit 3 screen capture](/assets/images/commit3.png)
 
 Saya telah mengikuti panduan tentang routing untuk halaman yang tidak dikenali, termasuk pembuatan halaman 404. Buku yang digunakan sangat jelas dan membantu sehingga saya semakin memahami sintaks serta gaya pemrograman Rust. Alur kode terasa jelas dan memudahkan saya dalam memahami cara kerjanya. 
+
+
+**Refleksi commit 4:**
+
+Code ini adalah web server single-threaded yang memproses request secara berurutan sehingga jika ada request lambat seperti `/sleep` seluruh server akan terblokir. Kekurangan utamanya adalah blocking execution, minimnya error handling, dan parsing HTTP yang terbatas. 
